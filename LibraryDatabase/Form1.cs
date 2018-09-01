@@ -34,9 +34,11 @@ namespace LibraryDatabase {
 		}
 
 		private void btnSearch_Click(object sender, EventArgs e) {
-
 			if(txbSearchText.Text == "") {
 				databaseManager.ListAll(lsbResults);
+			}
+			else {
+				databaseManager.Search(lsbResults, cmbSearchTerm.SelectedIndex, txbSearchText.Text);
 			}
 		}
 	}
